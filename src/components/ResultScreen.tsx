@@ -12,6 +12,7 @@ interface Props {
   bestScore: number | null;
   onCollectTreasure: (t: Treasure) => void;
   onPlayAgain: () => void;
+  onHome: () => void;
 }
 
 export default function ResultScreen({
@@ -21,6 +22,7 @@ export default function ResultScreen({
   bestScore,
   onCollectTreasure,
   onPlayAgain,
+  onHome,
 }: Props) {
   const score = Math.round((correct / TOTAL_QUESTIONS) * 100);
   const message = randomOf(FINISH_MESSAGES);
@@ -78,12 +80,20 @@ export default function ResultScreen({
         <TreasureBox onCollected={onCollectTreasure} />
       </div>
 
-      <button
-        onClick={onPlayAgain}
-        className="animate-pulse-big rounded-[2.5rem] bg-white px-14 py-6 text-4xl font-black text-pink-500 shadow-2xl transition-transform active:scale-95 sm:text-5xl"
-      >
-        🔁 다시 하기
-      </button>
+      <div className="flex flex-col items-center gap-3">
+        <button
+          onClick={onPlayAgain}
+          className="animate-pulse-big rounded-[2.5rem] bg-white px-14 py-6 text-4xl font-black text-pink-500 shadow-2xl transition-transform active:scale-95 sm:text-5xl"
+        >
+          🔁 다시 하기
+        </button>
+        <button
+          onClick={onHome}
+          className="rounded-[2rem] bg-white/90 px-10 py-4 text-2xl font-black text-purple-600 shadow-lg transition-transform active:scale-95"
+        >
+          🏠 홈으로 (내 친구들)
+        </button>
+      </div>
     </div>
   );
 }

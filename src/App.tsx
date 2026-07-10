@@ -98,6 +98,7 @@ function App() {
           bestScore={best}
           onCollectTreasure={handleCollectTreasure}
           onPlayAgain={() => setScreen("play")}
+          onHome={() => setScreen("start")}
         />
       )}
 
