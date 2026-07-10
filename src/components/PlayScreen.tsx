@@ -7,13 +7,7 @@ import {
   type Question,
 } from "../lib/game";
 import { askForWord, speak } from "../lib/speech";
-import {
-  playCombo,
-  playCorrect,
-  playHatch,
-  playLevelUp,
-  playWrong,
-} from "../lib/sound";
+import { playCombo, playCorrect, playWrong } from "../lib/sound";
 import {
   newLevel,
   newlyUnlockedPet,
@@ -21,6 +15,7 @@ import {
   type Pet,
   type Progress,
 } from "../lib/progress";
+import { petCeleb, levelCeleb, type CelebItem } from "../lib/celebrations";
 import StarBurst from "./StarBurst";
 import Confetti from "./Confetti";
 import CelebrationOverlay, { type Celebration } from "./CelebrationOverlay";
@@ -40,36 +35,6 @@ export interface GameSummary {
 interface Props {
   progress: Progress;
   onFinish: (summary: GameSummary) => void;
-}
-
-type CelebItem = { data: Celebration; sound: () => void };
-
-function petCeleb(pet: Pet): CelebItem {
-  const hatched = pet.key === "chick";
-  return {
-    data: {
-      emoji: pet.emoji,
-      title: hatched ? "알이 부화했어요! 🎉" : "새 친구 등장! 🎉",
-      subtitle: `${pet.emoji} ${pet.name}`,
-      color: "text-yellow-300",
-    },
-    sound: () => {
-      playHatch();
-      window.setTimeout(() => speak(pet.name), 400);
-    },
-  };
-}
-
-function levelCeleb(level: Level): CelebItem {
-  return {
-    data: {
-      emoji: level.emoji,
-      title: "LEVEL UP!",
-      subtitle: `Lv.${level.level} · ${level.name}`,
-      color: "text-lime-300",
-    },
-    sound: playLevelUp,
-  };
 }
 
 function comboText(combo: number): string {
@@ -384,7 +349,11 @@ export default function PlayScreen({ progress, onFinish }: Props) {
 
       {/* 큰 이벤트(부화/성장/레벨업) */}
       {celebration && (
-        <CelebrationOverlay data={celebration} onDone={onCelebrationDone} />
+        <CelebrationOverlay
+          key={celebration.title}
+          data={celebration}
+          onDone={onCelebrationDone}
+        />
       )}
     </div>
   );

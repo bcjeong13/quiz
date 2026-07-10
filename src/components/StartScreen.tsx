@@ -5,6 +5,8 @@ import {
   petMeter,
   type Progress,
 } from "../lib/progress";
+import { speak } from "../lib/speech";
+import AnimatedPet from "./AnimatedPet";
 
 interface Props {
   onStart: () => void;
@@ -29,9 +31,19 @@ export default function StartScreen({
 
   return (
     <div className="flex min-h-full flex-col items-center justify-center gap-7 px-6 py-10 text-center">
-      {/* 내 친구(성장 중인 펫) */}
+      {/* 내 친구(성장 중인 펫) — 누르면 인사 */}
       <div className="flex flex-col items-center gap-2">
-        <div className="animate-floaty text-8xl sm:text-9xl">{petEmoji}</div>
+        <button
+          onClick={() => pet && speak(pet.greeting)}
+          aria-label={pet ? pet.name : "egg"}
+          className="transition-transform active:scale-95"
+        >
+          <AnimatedPet
+            emoji={petEmoji}
+            kind={pet ? pet.key : "egg"}
+            className="text-8xl sm:text-9xl"
+          />
+        </button>
         <div className="w-48 rounded-full bg-white/25 px-4 py-2 backdrop-blur">
           <div className="text-sm font-black text-white">
             {pet ? pet.name : "My Egg"} · {meter.maxed ? "MAX" : `${meter.have}/${meter.need}`}

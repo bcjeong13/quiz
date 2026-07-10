@@ -15,14 +15,15 @@ export interface Pet {
   emoji: string;
   name: string;
   threshold: number;
+  greeting: string; // 부화/등장·터치 시 영어 인사(TTS)
 }
 export const EGG_EMOJI = "🥚";
 export const PETS: Pet[] = [
-  { key: "chick", emoji: "🐥", name: "Chick", threshold: 10 },
-  { key: "rabbit", emoji: "🐰", name: "Rabbit", threshold: 20 },
-  { key: "panda", emoji: "🐼", name: "Panda", threshold: 40 },
-  { key: "dino", emoji: "🦖", name: "Dino", threshold: 70 },
-  { key: "unicorn", emoji: "🦄", name: "Unicorn", threshold: 100 },
+  { key: "chick", emoji: "🐥", name: "Chick", threshold: 10, greeting: "Hi! I am a chick! Nice to meet you!" },
+  { key: "rabbit", emoji: "🐰", name: "Rabbit", threshold: 20, greeting: "Hello! I am a rabbit! Hop hop!" },
+  { key: "panda", emoji: "🐼", name: "Panda", threshold: 40, greeting: "Hi! I am a panda!" },
+  { key: "dino", emoji: "🦖", name: "Dino", threshold: 70, greeting: "Roar! I am a dino!" },
+  { key: "unicorn", emoji: "🦄", name: "Unicorn", threshold: 100, greeting: "Hello! I am a unicorn!" },
 ];
 
 // ── 플레이어 레벨(별 기준) ──────────────────────────
