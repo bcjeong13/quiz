@@ -7,6 +7,7 @@ import {
 } from "../lib/progress";
 import { speak } from "../lib/speech";
 import AnimatedPet from "./AnimatedPet";
+import BrowserHint from "./BrowserHint";
 
 interface Props {
   onStart: () => void;
@@ -31,6 +32,9 @@ export default function StartScreen({
 
   return (
     <div className="flex min-h-full flex-col items-center justify-center gap-7 px-6 py-10 text-center">
+      {/* 인앱 브라우저(카톡 등)면 크롬으로 열라고 안내 */}
+      <BrowserHint />
+
       {/* 내 친구(성장 중인 펫) — 누르면 인사 */}
       <div className="flex flex-col items-center gap-2">
         <button
