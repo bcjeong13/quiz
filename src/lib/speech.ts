@@ -50,17 +50,29 @@ export function speak(text: string): void {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
 
   const synth = window.speechSynthesis;
-  synth.cancel(); // stop anything currently speaking
-  synth.resume(); // 일부 모바일에서 일시정지 상태 방지
 
-  const utter = new SpeechSynthesisUtterance(text);
-  const voice = pickVoice();
-  if (voice) utter.voice = voice;
-  utter.lang = "en-US";
-  utter.rate = 0.8; // slow, kid-friendly
-  utter.pitch = 1.15;
-  utter.volume = 1;
-  synth.speak(utter);
+  // 안드로이드 크롬은 로드 직후 getVoices()가 비어 있어 첫 음성이 씹힌다.
+  // 음성 목록이 준비될 때까지 잠깐(최대 ~1.5초) 기다렸다가 말한다.
+  let tries = 0;
+  const attempt = () => {
+    if (!synth.getVoices().length && tries < 12) {
+      tries += 1;
+      window.setTimeout(attempt, 120);
+      return;
+    }
+    synth.cancel(); // 이전 음성 중지
+    synth.resume(); // 일부 모바일의 일시정지 상태 방지
+
+    const utter = new SpeechSynthesisUtterance(text);
+    const voice = pickVoice();
+    if (voice) utter.voice = voice;
+    utter.lang = "en-US";
+    utter.rate = 0.8; // 느리게, 아이용
+    utter.pitch = 1.15;
+    utter.volume = 1;
+    synth.speak(utter);
+  };
+  attempt();
 }
 
 export function askForWord(word: string): void {
