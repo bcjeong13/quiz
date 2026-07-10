@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // GitHub Pages 프로젝트 사이트 경로: https://<user>.github.io/kids-english-quiz/
-  base: "/kids-english-quiz/",
+  // GitHub Pages 프로젝트 사이트 경로: https://<user>.github.io/quiz/
+  base: "/quiz/",
   plugins: [react(), tailwindcss()],
 })
