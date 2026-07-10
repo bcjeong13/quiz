@@ -5,6 +5,7 @@ import ResultScreen from "./components/ResultScreen";
 import FriendsModal from "./components/FriendsModal";
 import StickerBookModal from "./components/StickerBookModal";
 import { unlockAudio } from "./lib/sound";
+import { unlockSpeech } from "./lib/speech";
 import {
   loadProgress,
   saveProgress,
@@ -34,7 +35,9 @@ function App() {
   const [lastResult, setLastResult] = useState<GameSummary | null>(null);
 
   function handleStart() {
-    unlockAudio(); // 첫 사용자 제스처 — 오디오/TTS 잠금 해제
+    // 첫 사용자 제스처 안에서 오디오 + 음성엔진을 모두 깨운다(모바일 필수)
+    unlockAudio();
+    unlockSpeech();
     setScreen("play");
   }
 

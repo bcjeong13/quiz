@@ -29,11 +29,29 @@ if (typeof window !== "undefined" && "speechSynthesis" in window) {
   };
 }
 
+// 모바일(특히 iOS Safari)은 첫 사용자 제스처 안에서 speechSynthesis.speak()를
+// 한 번 호출해줘야 이후 음성이 재생된다. START 탭에서 이 함수로 엔진을 깨운다.
+export function unlockSpeech(): void {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  try {
+    const synth = window.speechSynthesis;
+    synth.getVoices(); // 음성 목록 로딩 유도
+    synth.resume();
+    // 소리 없이 엔진만 활성화(무음 워밍업)
+    const warm = new SpeechSynthesisUtterance(" ");
+    warm.volume = 0;
+    synth.speak(warm);
+  } catch {
+    // 무시
+  }
+}
+
 export function speak(text: string): void {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
 
   const synth = window.speechSynthesis;
   synth.cancel(); // stop anything currently speaking
+  synth.resume(); // 일부 모바일에서 일시정지 상태 방지
 
   const utter = new SpeechSynthesisUtterance(text);
   const voice = pickVoice();
@@ -41,6 +59,7 @@ export function speak(text: string): void {
   utter.lang = "en-US";
   utter.rate = 0.8; // slow, kid-friendly
   utter.pitch = 1.15;
+  utter.volume = 1;
   synth.speak(utter);
 }
 
