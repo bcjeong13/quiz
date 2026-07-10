@@ -1,0 +1,334 @@
+[
+  {
+    "slug": "apple",
+    "text": "Apple"
+  },
+  {
+    "slug": "can_you_find_the_apple",
+    "text": "Can you find the Apple?"
+  },
+  {
+    "slug": "banana",
+    "text": "Banana"
+  },
+  {
+    "slug": "can_you_find_the_banana",
+    "text": "Can you find the Banana?"
+  },
+  {
+    "slug": "orange",
+    "text": "Orange"
+  },
+  {
+    "slug": "can_you_find_the_orange",
+    "text": "Can you find the Orange?"
+  },
+  {
+    "slug": "strawberry",
+    "text": "Strawberry"
+  },
+  {
+    "slug": "can_you_find_the_strawberry",
+    "text": "Can you find the Strawberry?"
+  },
+  {
+    "slug": "grape",
+    "text": "Grape"
+  },
+  {
+    "slug": "can_you_find_the_grape",
+    "text": "Can you find the Grape?"
+  },
+  {
+    "slug": "watermelon",
+    "text": "Watermelon"
+  },
+  {
+    "slug": "can_you_find_the_watermelon",
+    "text": "Can you find the Watermelon?"
+  },
+  {
+    "slug": "peach",
+    "text": "Peach"
+  },
+  {
+    "slug": "can_you_find_the_peach",
+    "text": "Can you find the Peach?"
+  },
+  {
+    "slug": "pear",
+    "text": "Pear"
+  },
+  {
+    "slug": "can_you_find_the_pear",
+    "text": "Can you find the Pear?"
+  },
+  {
+    "slug": "lion",
+    "text": "Lion"
+  },
+  {
+    "slug": "can_you_find_the_lion",
+    "text": "Can you find the Lion?"
+  },
+  {
+    "slug": "tiger",
+    "text": "Tiger"
+  },
+  {
+    "slug": "can_you_find_the_tiger",
+    "text": "Can you find the Tiger?"
+  },
+  {
+    "slug": "elephant",
+    "text": "Elephant"
+  },
+  {
+    "slug": "can_you_find_the_elephant",
+    "text": "Can you find the Elephant?"
+  },
+  {
+    "slug": "monkey",
+    "text": "Monkey"
+  },
+  {
+    "slug": "can_you_find_the_monkey",
+    "text": "Can you find the Monkey?"
+  },
+  {
+    "slug": "rabbit",
+    "text": "Rabbit"
+  },
+  {
+    "slug": "can_you_find_the_rabbit",
+    "text": "Can you find the Rabbit?"
+  },
+  {
+    "slug": "bear",
+    "text": "Bear"
+  },
+  {
+    "slug": "can_you_find_the_bear",
+    "text": "Can you find the Bear?"
+  },
+  {
+    "slug": "dog",
+    "text": "Dog"
+  },
+  {
+    "slug": "can_you_find_the_dog",
+    "text": "Can you find the Dog?"
+  },
+  {
+    "slug": "cat",
+    "text": "Cat"
+  },
+  {
+    "slug": "can_you_find_the_cat",
+    "text": "Can you find the Cat?"
+  },
+  {
+    "slug": "car",
+    "text": "Car"
+  },
+  {
+    "slug": "can_you_find_the_car",
+    "text": "Can you find the Car?"
+  },
+  {
+    "slug": "bus",
+    "text": "Bus"
+  },
+  {
+    "slug": "can_you_find_the_bus",
+    "text": "Can you find the Bus?"
+  },
+  {
+    "slug": "train",
+    "text": "Train"
+  },
+  {
+    "slug": "can_you_find_the_train",
+    "text": "Can you find the Train?"
+  },
+  {
+    "slug": "airplane",
+    "text": "Airplane"
+  },
+  {
+    "slug": "can_you_find_the_airplane",
+    "text": "Can you find the Airplane?"
+  },
+  {
+    "slug": "ship",
+    "text": "Ship"
+  },
+  {
+    "slug": "can_you_find_the_ship",
+    "text": "Can you find the Ship?"
+  },
+  {
+    "slug": "bicycle",
+    "text": "Bicycle"
+  },
+  {
+    "slug": "can_you_find_the_bicycle",
+    "text": "Can you find the Bicycle?"
+  },
+  {
+    "slug": "motorcycle",
+    "text": "Motorcycle"
+  },
+  {
+    "slug": "can_you_find_the_motorcycle",
+    "text": "Can you find the Motorcycle?"
+  },
+  {
+    "slug": "truck",
+    "text": "Truck"
+  },
+  {
+    "slug": "can_you_find_the_truck",
+    "text": "Can you find the Truck?"
+  },
+  {
+    "slug": "red",
+    "text": "Red"
+  },
+  {
+    "slug": "can_you_find_the_red",
+    "text": "Can you find the Red?"
+  },
+  {
+    "slug": "yellow",
+    "text": "Yellow"
+  },
+  {
+    "slug": "can_you_find_the_yellow",
+    "text": "Can you find the Yellow?"
+  },
+  {
+    "slug": "green",
+    "text": "Green"
+  },
+  {
+    "slug": "can_you_find_the_green",
+    "text": "Can you find the Green?"
+  },
+  {
+    "slug": "blue",
+    "text": "Blue"
+  },
+  {
+    "slug": "can_you_find_the_blue",
+    "text": "Can you find the Blue?"
+  },
+  {
+    "slug": "purple",
+    "text": "Purple"
+  },
+  {
+    "slug": "can_you_find_the_purple",
+    "text": "Can you find the Purple?"
+  },
+  {
+    "slug": "brown",
+    "text": "Brown"
+  },
+  {
+    "slug": "can_you_find_the_brown",
+    "text": "Can you find the Brown?"
+  },
+  {
+    "slug": "black",
+    "text": "Black"
+  },
+  {
+    "slug": "can_you_find_the_black",
+    "text": "Can you find the Black?"
+  },
+  {
+    "slug": "one",
+    "text": "One"
+  },
+  {
+    "slug": "can_you_find_the_one",
+    "text": "Can you find the One?"
+  },
+  {
+    "slug": "two",
+    "text": "Two"
+  },
+  {
+    "slug": "can_you_find_the_two",
+    "text": "Can you find the Two?"
+  },
+  {
+    "slug": "three",
+    "text": "Three"
+  },
+  {
+    "slug": "can_you_find_the_three",
+    "text": "Can you find the Three?"
+  },
+  {
+    "slug": "four",
+    "text": "Four"
+  },
+  {
+    "slug": "can_you_find_the_four",
+    "text": "Can you find the Four?"
+  },
+  {
+    "slug": "five",
+    "text": "Five"
+  },
+  {
+    "slug": "can_you_find_the_five",
+    "text": "Can you find the Five?"
+  },
+  {
+    "slug": "six",
+    "text": "Six"
+  },
+  {
+    "slug": "can_you_find_the_six",
+    "text": "Can you find the Six?"
+  },
+  {
+    "slug": "seven",
+    "text": "Seven"
+  },
+  {
+    "slug": "can_you_find_the_seven",
+    "text": "Can you find the Seven?"
+  },
+  {
+    "slug": "eight",
+    "text": "Eight"
+  },
+  {
+    "slug": "can_you_find_the_eight",
+    "text": "Can you find the Eight?"
+  },
+  {
+    "slug": "hi_i_am_a_chick_nice_to_meet_you",
+    "text": "Hi! I am a chick! Nice to meet you!"
+  },
+  {
+    "slug": "hello_i_am_a_rabbit_hop_hop",
+    "text": "Hello! I am a rabbit! Hop hop!"
+  },
+  {
+    "slug": "hi_i_am_a_panda",
+    "text": "Hi! I am a panda!"
+  },
+  {
+    "slug": "roar_i_am_a_dino",
+    "text": "Roar! I am a dino!"
+  },
+  {
+    "slug": "hello_i_am_a_unicorn",
+    "text": "Hello! I am a unicorn!"
+  }
+]
