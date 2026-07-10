@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Baloo 2", "Comic Sans MS", "Fredoka", system-ui, -apple-system,
+    "Segoe UI", "Apple SD Gothic Neo", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  user-select: none;
+}
+
+/* ---------- Animations ---------- */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-12px) rotate(-3deg);
+  }
+  40% {
+    transform: translateX(12px) rotate(3deg);
+  }
+  60% {
+    transform: translateX(-8px) rotate(-2deg);
+  }
+  80% {
+    transform: translateX(8px) rotate(2deg);
+  }
+}
+.animate-shake {
+  animation: shake 0.45s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate-pop {
+  animation: pop 0.35s cubic-bezier(0.2, 1.4, 0.5, 1) both;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.animate-floaty {
+  animation: floaty 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-big {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+.animate-pulse-big {
+  animation: pulse-big 1.3s ease-in-out infinite;
+}
+
+/* 정답 순간, 화면 중앙에서 별/폭죽이 사방으로 터지는 효과 */
+@keyframes burst {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0) scale(0.2) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(var(--dx), var(--dy)) scale(1.3)
+      rotate(var(--rot));
+    opacity: 0;
+  }
+}
+.animate-burst {
+  animation: burst 1s ease-out forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(540deg);
+    opacity: 1;
+  }
+}
+.animate-fall {
+  animation: fall linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shake,
+  .animate-pop,
+  .animate-floaty,
+  .animate-pulse-big,
+  .animate-burst,
+  .animate-fall {
+    animation: none;
+  }
+}
